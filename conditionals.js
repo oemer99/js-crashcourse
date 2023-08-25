@@ -120,6 +120,113 @@ if (cash7 >= price7 || isStoreOpen2 /*ist das selbe wie === true, wenn man gegen
 
 Falsy Values
 
-MIN: 49:55
+A falsy value is considered as "false" when converted to a boolean
+
+undefined
+null
+NaN
+0
+""
+false
+
+
+Truthy values
+
+A truthy value is considered as "true" when converted to a boolean
+
+10
+3.14
+
+"Testtest"
+"false"
+"0"
+
+[]
+{}
+
 
 */
+
+if ("blala") {
+    console.log("print the receipt");
+    
+}
+else {
+    console.log("falsy value");
+}
+
+if ("") {
+    console.log("print the receipt");
+    
+}
+else {
+    console.log("falsy value");
+}
+
+// Oder noch einfacher...
+
+let val ="Ömer"
+
+if (val) {
+    console.log(!!val);         // Mit double !! kann man schauen ob es true oder false ist in der Konsole
+                                // true da val = "Ömer"
+}
+
+let val2 =""
+
+if (val2) {
+    console.log(!!val2);        //false da val2 "" ist und somit es zu else geht und in der Konsole false gibt
+}
+else {
+    console.log(!!val2);
+}
+
+// -----------------------------------------------------
+
+
+// Ternary Operators
+// A shortcut for an if else condition
+
+// isObese ? "unhealty" : "healty"
+// subscribed? "show video" : "hide video"
+
+let hot = false
+hot ? console.log("weather is hot outside") : console.log("weather is cold");
+
+
+
+
+let subscribed2 = true
+let loggedIn2 = false
+
+let str = subscribed2 || loggedIn2 ? "show the video" : "hide the video"
+console.log(str);
+
+// Mini Aufgabe
+
+let geld = 50
+let preis = 40
+let istGeschäftOffen = true
+
+if (geld >= preis && !!istGeschäftOffen) {
+    console.log("give receipt");
+}
+else {
+    console.log("do not give receipt");
+}
+
+let geld2 = 50
+let preis2 = 40
+let istGeschäftOffen2 = false
+
+if (geld2 >= preis2 && !!istGeschäftOffen2) {
+    console.log("give receipt");
+}
+else {
+    console.log("do not give receipt");
+}
+
+
+// Gängigste Methode 
+let str2 = geld2 >= preis2 && istGeschäftOffen2 ? "give receipt" : "do not give receipt"
+console.log(str2);
